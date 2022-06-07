@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Index">
+
+    <Spinner
+        android:id="@+id/Spinner"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:entries="@array/sex"/>
+
+    <Spinner
+        android:id="@+id/SpinnerAge"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Spinner"/>
+
+    <TableLayout
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SpinnerAge"
+        app:layout_constraintVertical_bias="0.082">
+
+        <Button
+            android:id="@+id/Btn1"
+            android:text="Индекс массы тела (кг/м2)"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn2"
+            android:text="Уровень двигательный активности (число шагов в сутки)"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn3"
+            android:text="Коэффициент выносливости (усл. ед.)"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn4"
+            android:text="Уровень регуляции сердечно-сосудистой системы"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn5"
+            android:text="Жизненный индекс (мл/кг)"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn6"
+            android:text="Циркулярно-респираторный коэффициент Скибински (усл. ед.)"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn7"
+            android:text="Вегетативный индекс Кердо (усл. ед)"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/Btn8"
+            android:text="Индекс функциональных изменений"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+        <Button
+            android:id="@+id/AllBtn"
+            android:text="Начать"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+    </TableLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/gerb"/>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/teal_700">
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/indexBtn"
+            android:backgroundTint="@color/teal_700"
+            android:foreground="@drawable/ic_baseline_home_24" />
+
+        <Button
+            android:id="@+id/indexBtn"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:foreground="@drawable/ic_baseline_calculate_24"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/teal_700"/>
+
+        <Button
+            android:id="@+id/resultBtn"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:foreground="@drawable/ic_baseline_assignment_turned_in_24"
+            android:layout_toEndOf="@+id/indexBtn"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/teal_700"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
